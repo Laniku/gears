@@ -108,7 +108,9 @@ void loop() {
   int status = 1;
 
   do {
-    printf("μ ");
+    printf(“\033[0;34m”);
+    printf("μ ~> ");
+    printf(“\033[0m”);
     line = read_line();
     args = split_line(line);
     status = gears_execute(args);

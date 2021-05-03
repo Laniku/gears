@@ -11,7 +11,7 @@ char **split_line(char *);
 int gears_exit(char **);
 int gears_execute(char **);
 
-int dash_execute(char **args) {
+int gears_execute(char **args) {
   pid_t cpid;
   int status;
 

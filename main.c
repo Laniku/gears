@@ -35,7 +35,7 @@ int gears_execute(char **args) {
   return 1;
 }
 
-int dash_exit(char **args) {
+int gears_exit(char **args) {
   return 0;
 }
 

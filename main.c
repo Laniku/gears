@@ -40,7 +40,7 @@ int dash_exit(char **args) {
 }
 
 char **split_line(char * line) {
-  int buffsize = TK_BUFF_SIZE, position = 0;
+  int buffsize = BUFSIZ, position = 0;
   char **tokens = malloc(buffsize * sizeof(char *));
   char *token;
 

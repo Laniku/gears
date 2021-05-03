@@ -3,7 +3,8 @@
 #include <stdlib.h>
 
 #define TOK_DELIM " \t\r\n"
-#define RED "\033[0;31m"
+#define RED  "\x1B[31m"
+#define BLUE  "\x1B[34m"
 #define RESET "\e[0m"
 
 char *read_line();
@@ -108,9 +109,7 @@ void loop() {
   int status = 1;
 
   do {
-    printf(“\033[0;34m”);
-    printf("μ ~> ");
-    printf(“\033[0m”);
+    printf("%sμ ~>", BLUE);
     line = read_line();
     args = split_line(line);
     status = gears_execute(args);

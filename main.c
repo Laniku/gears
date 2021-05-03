@@ -54,7 +54,7 @@ char **split_line(char * line) {
     position++;
 
     if (position >= buffsize) {
-      buffsize += TK_BUFF_SIZE;
+      buffsize += BUFSIZ;
       tokens = realloc(tokens, buffsize * sizeof(char * ));
 
       if (!tokens) {
